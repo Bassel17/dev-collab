@@ -19,7 +19,7 @@ const VideoChatComponent = (props) => {
             });
         }
         return () => jitsi && jitsi.dispose() 
-    }, [])
+    })
 
     return <div style={{height:props.height,width:props.width}}id={parentNode} />
 }
