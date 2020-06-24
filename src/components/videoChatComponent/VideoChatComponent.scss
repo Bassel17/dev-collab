@@ -1,0 +1,23 @@
+@import '../../colorTheme.scss';
+
+.toolbar {
+    height: 15vh;
+    width: 70vw;
+    background-color: $main-color;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-content: center;
+    justify-items: center;
+    &__icon{
+        font-size: 3em;
+        color: #fff;
+        &--hangup{
+            color:red;
+        }
+    }
+}
+
+.videobox{
+    height: 85vh;
+    width: 70vw;
+}
