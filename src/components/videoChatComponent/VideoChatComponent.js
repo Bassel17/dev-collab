@@ -21,12 +21,21 @@ const VideoChatComponent = (props) => {
     const interfaceConfigOverwrite = props.interfaceConfigOverwrite;
     const configOverwrite = props.configOverwrite
     const jitsi = useJitsi({ roomName, parentNode ,height, width, interfaceConfigOverwrite, configOverwrite})
-    
+
     useEffect(() => {
         if (jitsi) {
             jitsi.addEventListener('videoConferenceJoined', () => {
                 jitsi.executeCommand('displayName', props.displayName);
                 jitsi.executeCommand('password', props.password);
+            });
+            jitsi.addEventListener('screenSharingStatusChanged', (screenShareStatus) => {
+                setScreenShareState(screenShareStatus.on);
+            });
+            jitsi.addEventListener('audioMuteStatusChanged', (audioMuteStatus) => {
+                setMicrophoneState(!audioMuteStatus.muted);
+            });
+            jitsi.addEventListener('videoMuteStatusChanged', (videoMuteStatus) => {
+                setVideoState(!videoMuteStatus.muted);
             });
         }
         return () => jitsi && jitsi.dispose() 
@@ -34,17 +43,14 @@ const VideoChatComponent = (props) => {
 
     const toggleMute = () => {
         jitsi.executeCommand('toggleAudio');
-        setMicrophoneState(!microphoneState);
     }
 
     const toggleVideo = () => {
         jitsi.executeCommand('toggleVideo');
-        setVideoState(!videoState);
     }
 
     const toggleSharescreen = () => {
         jitsi.executeCommand('toggleShareScreen');
-        setScreenShareState(!screenShareState);
     }
 
     const hangUp = () => {
