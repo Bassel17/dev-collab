@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cfaa83bb-9d0a-4fc6-a52a-eae796927783/deploy-status)](https://app.netlify.com/sites/fervent-mccarthy-ba0927/deploys)
+
 ## Available Scripts
 
 In the project directory, you can run:
