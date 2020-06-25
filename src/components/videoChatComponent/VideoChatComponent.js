@@ -41,30 +41,32 @@ const VideoChatComponent = (props) => {
         return () => jitsi && jitsi.dispose() 
     },[jitsi, props])
 
-    const toggleMute = () => {
-        jitsi.executeCommand('toggleAudio');
-    }
-
-    const toggleVideo = () => {
-        jitsi.executeCommand('toggleVideo');
-    }
-
-    const toggleSharescreen = () => {
-        jitsi.executeCommand('toggleShareScreen');
-    }
-
-    const hangUp = () => {
-        jitsi.executeCommand('hangup');
-    }
+    const toggle = command => jitsi.executeCommand(command) ;
 
     return (
         <React.Fragment>
             <div className="videobox" id={parentNode} />
             <div className="toolbar">
-                <Icon className="toolbar__icon" onClick = {toggleMute} icon={microphoneState? microphoneFilled : microphoneOffFilled }/>
-                <Icon className="toolbar__icon toolbar__icon--hangup" onClick = {hangUp} icon={phoneOffFilled } />
-                <Icon className="toolbar__icon" onClick = {toggleVideo} icon={videoState ? videoFilled:videoOffFilled} />
-                <Icon className="toolbar__icon" onClick = {toggleSharescreen} icon={screenShareState ? screenIcon : screenOff}/>
+                <Icon 
+                    className="toolbar__icon" 
+                    onClick = {()=>toggle('toggleAudio')} 
+                    icon={microphoneState? microphoneFilled : microphoneOffFilled }
+                />
+                <Icon 
+                    className="toolbar__icon toolbar__icon--hangup"
+                    onClick = {()=>toggle('hangup')} 
+                    icon={phoneOffFilled } 
+                />
+                <Icon 
+                    className="toolbar__icon" 
+                    onClick = {()=>toggle('toggleVideo')} 
+                    icon={videoState ? videoFilled:videoOffFilled} 
+                />
+                <Icon 
+                    className="toolbar__icon" 
+                    onClick = {()=>toggle('toggleShareScreen')} 
+                    icon={screenShareState ? screenIcon : screenOff}
+                />
             </div>
         </React.Fragment>
     )
