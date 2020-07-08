@@ -1,7 +1,7 @@
 import React from 'react';
-import VideoChatComponent from '../components/videoChatComponent/VideoChatComponent';
-import interfaceConfigOverwrite from '../configs/interfaceConfig';
-import configOverwrite from '../configs/config';
+import VideoChatComponent from '../../components/videoChatComponent/VideoChatComponent';
+import interfaceConfigOverwrite from '../../configs/interfaceConfig';
+import configOverwrite from '../../configs/config';
 
 function VideoChatPage() {
   return (
