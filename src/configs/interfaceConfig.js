@@ -2,7 +2,6 @@ const interfaceConfigOverwrite = {
     DEFAULT_REMOTE_DISPLAY_NAME: 'Fellow Coder',
     APP_NAME: 'Dev-Collab',
     CLOSE_PAGE_GUEST_HINT: true,
-    TOOLBAR_BUTTONS: [],
     DISPLAY_WELCOME_PAGE_CONTENT: false,
     MOBILE_APP_PROMO: false,
     NATIVE_APP_NAME: 'Dev-Collab',
