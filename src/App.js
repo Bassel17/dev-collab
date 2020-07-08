@@ -14,6 +14,12 @@ const interfaceConfigOverwrite = {
   SHOW_POWERED_BY: false,
   SHOW_PROMOTIONAL_CLOSE_PAGE: false,
   SHOW_WATERMARK_FOR_GUESTS: false,
+  JITSI_WATERMARK_LINK: '',
+  LIVE_STREAMING_HELP_LINK: '',
+  SHOW_DEEP_LINKING_IMAGE: false,
+  TOOLBAR_BUTTONS: [
+    'fullscreen'
+],
 }
 
 const configOverwrite = {
