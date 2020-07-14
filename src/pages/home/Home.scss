@@ -12,7 +12,7 @@
         justify-content: center;
         align-items: center;
         &__title{
-            width:55%;
+            width:70%;
             margin-bottom:2em;
             text-align: center;
             color:$secondary-color;
@@ -25,7 +25,10 @@
             text-decoration: none;
             background-color: $secondary-color;
             border: 1px solid $secondary-color;
-            padding: 1rem;
+            text-align: center;
+            width: 35%;
+            padding: 5px 0;
+            margin-bottom:1em;
             &:hover{
                 color:$secondary-color;
                 background-color: $main-color;

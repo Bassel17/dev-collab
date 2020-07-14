@@ -1,0 +1,39 @@
+@import '../../colorTheme.scss';
+.modal-container{
+    padding:1em;
+    background-color:$secondary-color;
+    display: flex;
+    flex-direction: column;
+    height:350px;
+    width: 250px;
+    position:absolute;
+    &--not-visible{
+        display: none;
+    }
+    &__input{
+        margin-bottom: 1em;
+        color:$main-color;
+    }
+    &__label{
+        margin-bottom: 0.5em;
+        color:$main-color;
+    }
+    &__button{
+        font-size: 1.5rem;
+        font-weight: bold;
+        color:$secondary-color;
+        text-decoration: none;
+        background-color: $main-color;
+        border: 1px solid $main-color;
+        width:70%;
+        padding:2px 0;
+        align-self:center;
+        margin-top:1em;
+    }
+
+    &__button-container{
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom:1em;
+    }
+}
