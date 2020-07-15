@@ -3,24 +3,23 @@ import Home from './pages/home/Home';
 import VideoChatPage from './pages/videoChatPage/VideoChatPage';
 import './App.scss';
 import {
-  BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  withRouter
 } from "react-router-dom";
 
 function App() {
+
   return (
-    <Router>
       <Switch>
           <Route exact path="/">
-            <Home/>
+            <Home />
           </Route>
-          <Route exact path="/room">
-            <VideoChatPage/>
+          <Route path="/room/:roomName">
+            <VideoChatPage />
           </Route>
-        </Switch>
-    </Router>
+      </Switch>
   );
 }
 
-export default App;
+export default withRouter(App);

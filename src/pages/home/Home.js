@@ -38,42 +38,12 @@ function Home (){
                 toggleModal = {toggleModalCreateSession}
                 visible = {modalStateCreateSession} 
                 buttonText="Start Session"
-                fields={[
-                    {
-                        label:"username",
-                        type:"text"
-                    },
-                    {
-                        label:"room name",
-                        type:"text"
-                    },
-                    {
-                        label:"password",
-                        type:"text"
-                    }
-                ]}
-
                 className="home-container__modal"
             />
             <InputModalComponent
                 toggleModal = {toggleModalJoinSession}
                 visible = {modalStateJoinSession} 
                 buttonText="Join Session"
-                fields={[
-                    {
-                        label:"username",
-                        type:"text"
-                    },
-                    {
-                        label:"room name",
-                        type:"text"
-                    },
-                    {
-                        label:"password",
-                        type:"text"
-                    }
-                ]}
-
                 className="home-container__modal"
             />
         </div>
