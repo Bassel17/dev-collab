@@ -8,7 +8,7 @@ import {
   useLocation
 } from "react-router-dom";
 
-function VideoChatPage(props) {
+function VideoChatPage() {
   const {roomName} = useParams();
   const location = useLocation();
   return (
@@ -17,8 +17,8 @@ function VideoChatPage(props) {
         interfaceConfigOverwrite = {interfaceConfigOverwrite} 
         configOverwrite = {configOverwrite}
         roomName = {roomName}
-        displayName = {location.state.username}
-        password = {location.state.password}
+        displayName = {location.state?.username}
+        password = {location.state?.password}
       />
     </div>
   );

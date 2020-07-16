@@ -13,6 +13,7 @@
     &__input{
         margin-bottom: 1em;
         color:$main-color;
+        padding: 5px;
     }
     &__label{
         margin-bottom: 0.5em;
@@ -35,5 +36,8 @@
         display: flex;
         justify-content: flex-end;
         margin-bottom:1em;
+        button{
+            padding:2px 5px;
+        }
     }
 }

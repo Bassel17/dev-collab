@@ -9,6 +9,9 @@ import microphoneOffFilled from '@iconify/icons-carbon/microphone-off-filled';
 import screenOff from '@iconify/icons-carbon/screen-off';
 import screenIcon from '@iconify/icons-carbon/screen';
 import phoneOffFilled from '@iconify/icons-carbon/phone-off-filled';
+import {
+    withRouter
+  } from "react-router-dom";
 
 const VideoChatComponent = (props) => {
     const roomName = props.roomName;
@@ -54,7 +57,10 @@ const VideoChatComponent = (props) => {
                 />
                 <Icon 
                     className="toolbar__icon toolbar__icon--hangup"
-                    onClick = {()=>toggle('hangup')} 
+                    onClick = {()=>{
+                        toggle('hangup');
+                        props.history.push('/');
+                    }} 
                     icon={phoneOffFilled } 
                 />
                 <Icon 
@@ -72,4 +78,4 @@ const VideoChatComponent = (props) => {
     )
 }
 
-export default VideoChatComponent;
+export default withRouter(VideoChatComponent);
